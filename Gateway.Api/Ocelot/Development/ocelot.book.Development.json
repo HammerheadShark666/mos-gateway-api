@@ -1,0 +1,92 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{version}/book/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 22001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/book/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DangerousAcceptAnyServerCertificateValidator": true,
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+      //,
+      //"RouteClaimsRequirement": {
+      //  "Role": "User"
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/book/title/{criteria}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 22001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/book/title/{criteria}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DangerousAcceptAnyServerCertificateValidator": true,
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+      //,
+      //"RouteClaimsRequirement": {
+      //  "Role": "User"
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/book/add",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 22001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/book/add",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DangerousAcceptAnyServerCertificateValidator": true,
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/book/update",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 22001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/book/update",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "DangerousAcceptAnyServerCertificateValidator": true,
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/book/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 22001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/book/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "DangerousAcceptAnyServerCertificateValidator": true,
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    }
+  ]
+}

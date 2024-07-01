@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  gateway.api:
+    container_name: microservice.gateway.api
+    image: ${DOCKER_REGISTRY-}gatewayapi
+    build:
+      context: .
+      dockerfile: Gateway.Api/Dockerfile
+    ports: 
+      - "11000:8080"
+      - "11001:8081"    
+    environment: 
+      ASPNETCORE_ENVIRONMENT: Development 
+      JWT_ISSUER: ${JWT_ISSUER}
+      JWT_AUDIENCE: ${JWT_AUDIENCE}
+      JWT_SYMMETRIC_SECURITY_KEY: ${JWT_SYMMETRIC_SECURITY_KEY} 
+    networks:
+      - ms-order-system  
+
+networks:
+  ms-order-system: 
+    external: true
