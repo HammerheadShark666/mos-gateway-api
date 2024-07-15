@@ -15,6 +15,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:11001"
+    "BaseUrl": "https://prod-ap-ms-order-api-gateway.azurewebsites.net"
   }
 }
