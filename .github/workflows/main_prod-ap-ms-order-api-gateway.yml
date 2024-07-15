@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: prodcrmsordersystem.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_4fa653b145464cdb9989d002ab64dcd9 }}/gatewayapi:${{ github.sha }}
-        file: ./Dockerfile
+        file: ./Gateway.Api/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
