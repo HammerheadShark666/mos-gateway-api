@@ -5,6 +5,9 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "gateway.api": "StartDebugging"
+      },
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production" 
       }
     }
   }

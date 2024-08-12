@@ -14,7 +14,8 @@ public static class IServiceCollectionExtensions
         IConfiguration configuration = new ConfigurationBuilder()
                            .SetBasePath(builder.Environment.ContentRootPath)  
                            .AddJsonFile($"ocelot.json", false, true) 
-                           .AddOcelot($"Ocelot/{builder.Environment.EnvironmentName}/", builder.Environment)
+                          // .AddOcelot($"Ocelot/{builder.Environment.EnvironmentName}/", builder.Environment)
+                           .AddOcelot($"Ocelot/Production/", builder.Environment)
                            .AddEnvironmentVariables()
                            .Build();
 

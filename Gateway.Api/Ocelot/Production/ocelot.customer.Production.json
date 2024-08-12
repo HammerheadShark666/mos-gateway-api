@@ -15,10 +15,6 @@
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
-      //,
-      //"RouteClaimsRequirement": {
-      //  "Role": "User"
-      //}
     },
     {
       "DownstreamPathTemplate": "/api/{version}/customer/update",

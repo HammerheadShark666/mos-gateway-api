@@ -1,0 +1,21 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{version}/order-history/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 29001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/order-history/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DangerousAcceptAnyServerCertificateValidator": true,
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "Key": "order-history"
+    } 
+  ]
+}
