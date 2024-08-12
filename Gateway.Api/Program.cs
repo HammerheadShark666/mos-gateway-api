@@ -8,7 +8,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(); 
 builder.Services.ConfigureOcelot(builder); 
 builder.Services.ConfigureJwt();
-builder.Services.ConfigureApplicationInsights();
 
 var app = builder.Build(); 
  

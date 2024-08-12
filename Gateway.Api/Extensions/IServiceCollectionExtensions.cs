@@ -21,9 +21,4 @@ public static class IServiceCollectionExtensions
 
         builder.Services.AddOcelot(configuration);  
     }
-
-    public static void ConfigureApplicationInsights(this IServiceCollection services)
-    { 
-        services.AddApplicationInsightsTelemetry();
-    }
 }
