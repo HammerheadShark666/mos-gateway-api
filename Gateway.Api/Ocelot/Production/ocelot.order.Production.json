@@ -32,7 +32,7 @@
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       },
-      "Key":  "customer-address"
+      "Key": "customer-address"
     },
     {
       "DownstreamPathTemplate": "/api/{version}/order/add",
@@ -44,6 +44,22 @@
         }
       ],
       "UpstreamPathTemplate": "/api/{version}/order/add",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DangerousAcceptAnyServerCertificateValidator": true,
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/order/completed",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "prod-ap-ms-order.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{version}/order/completed",
       "UpstreamHttpMethod": [ "POST" ],
       "DangerousAcceptAnyServerCertificateValidator": true,
       "AuthenticationOptions": {
