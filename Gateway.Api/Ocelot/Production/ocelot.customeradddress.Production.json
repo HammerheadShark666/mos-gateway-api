@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/{version}/customer-address",
+      "DownstreamPathTemplate": "/{version}/customer-address",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/customer-address",
+      "UpstreamPathTemplate": "/{version}/customer-address",
       "UpstreamHttpMethod": [ "GET" ],
       "DangerousAcceptAnyServerCertificateValidator": true,
       "AuthenticationOptions": {
