@@ -2,21 +2,21 @@ using Gateway.Api.Extensions;
 using Ocelot.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
- 
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(); 
-builder.Services.ConfigureOcelot(builder); 
+builder.Services.AddSwaggerGen();
+builder.Services.ConfigureOcelot(builder);
 builder.Services.ConfigureJwt();
 
-var app = builder.Build(); 
- 
+var app = builder.Build();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
- 
+
 app.UseHttpsRedirection();
 app.UseOcelot().Wait();
 app.UseAuthentication();

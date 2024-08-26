@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/{version}/order/{id}",
+      "DownstreamPathTemplate": "/{version}/order/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 23001
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/order/{id}",
+      "UpstreamPathTemplate": "/{version}/order/{id}",
       "UpstreamHttpMethod": [ "GET" ],
       "DangerousAcceptAnyServerCertificateValidator": true,
       "AuthenticationOptions": {
@@ -18,7 +18,7 @@
       "Key": "order"
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/customer-address/{id}",
+      "DownstreamPathTemplate": "/{version}/customer-address/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -26,7 +26,7 @@
           "Port": 13001
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/customer-address/{id}",
+      "UpstreamPathTemplate": "/{version}/customer-address/{id}",
       "UpstreamHttpMethod": [ "GET" ],
       "DangerousAcceptAnyServerCertificateValidator": true,
       "AuthenticationOptions": {
@@ -35,7 +35,7 @@
       "Key":  "customer-address"
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/order/add",
+      "DownstreamPathTemplate": "/{version}/order/add",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -43,7 +43,7 @@
           "Port": 23001
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/order/add",
+      "UpstreamPathTemplate": "/{version}/order/add",
       "UpstreamHttpMethod": [ "POST" ],
       "DangerousAcceptAnyServerCertificateValidator": true,
       "AuthenticationOptions": {

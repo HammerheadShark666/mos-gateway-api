@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/{version}/customer",
+      "DownstreamPathTemplate": "/{version}/customer",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 14001
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/customer",
+      "UpstreamPathTemplate": "/{version}/customer",
       "UpstreamHttpMethod": [ "GET" ],
       "DangerousAcceptAnyServerCertificateValidator": true,
       "AuthenticationOptions": {
@@ -17,7 +17,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/{version}/customer/update",
+      "DownstreamPathTemplate": "/{version}/customer/update",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -25,7 +25,7 @@
           "Port": 14001
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/customer/update",
+      "UpstreamPathTemplate": "/{version}/customer/update",
       "UpstreamHttpMethod": [ "PUT" ],
       "DangerousAcceptAnyServerCertificateValidator": true,
       "AuthenticationOptions": {

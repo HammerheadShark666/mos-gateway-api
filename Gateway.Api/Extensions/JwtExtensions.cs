@@ -6,7 +6,7 @@ using System.Text;
 namespace Gateway.Api.Extensions;
 
 public static class JwtExtensions
-{ 
+{
     public static void AddJwtAuthentication(this IServiceCollection services)
     {
         services.AddAuthentication(optiones =>
@@ -16,7 +16,7 @@ public static class JwtExtensions
             optiones.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
         })
         .AddJwtBearer(o =>
-        { 
+        {
             o.TokenValidationParameters = new TokenValidationParameters
             {
                 ValidAudience = EnvironmentVariablesHelper.JwtAudience,
@@ -30,6 +30,6 @@ public static class JwtExtensions
             };
 
             o.MapInboundClaims = false;
-        }); 
-    } 
+        });
+    }
 }

@@ -10,15 +10,15 @@ public static class IServiceCollectionExtensions
     }
 
     public static void ConfigureOcelot(this IServiceCollection services, WebApplicationBuilder builder)
-    { 
+    {
         IConfiguration configuration = new ConfigurationBuilder()
-                           .SetBasePath(builder.Environment.ContentRootPath)  
-                           .AddJsonFile($"ocelot.json", false, true) 
-                          // .AddOcelot($"Ocelot/{builder.Environment.EnvironmentName}/", builder.Environment)
+                           .SetBasePath(builder.Environment.ContentRootPath)
+                           .AddJsonFile($"ocelot.json", false, true)
+                           // .AddOcelot($"Ocelot/{builder.Environment.EnvironmentName}/", builder.Environment)
                            .AddOcelot($"Ocelot/Production/", builder.Environment)
                            .AddEnvironmentVariables()
                            .Build();
 
-        builder.Services.AddOcelot(configuration);  
+        builder.Services.AddOcelot(configuration);
     }
 }
