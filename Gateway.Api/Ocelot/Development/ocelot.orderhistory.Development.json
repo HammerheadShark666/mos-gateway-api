@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/{version}/order-history/{id}",
+      "DownstreamPathTemplate": "/{version}/order-history/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 29001
         }
       ],
-      "UpstreamPathTemplate": "/api/{version}/order-history/{id}",
+      "UpstreamPathTemplate": "/{version}/order-history/{id}",
       "UpstreamHttpMethod": [ "GET" ],
       "DangerousAcceptAnyServerCertificateValidator": true,
       "AuthenticationOptions": {
