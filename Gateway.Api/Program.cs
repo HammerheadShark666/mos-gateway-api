@@ -24,6 +24,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Logger.LogInformation("Starting Gateway Application");
-app.Logger.LogInformation("ENVIRONMENT - " + builder.Environment.EnvironmentName);
+app.Logger.LogInformation("ENVIRONMENT - {builder.Environment.EnvironmentName}", builder.Environment.EnvironmentName);
 
 app.Run();
