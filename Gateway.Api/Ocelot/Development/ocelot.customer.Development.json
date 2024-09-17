@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/{version}/customer",
+      "DownstreamPathTemplate": "/{version}/customer/logged-in",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 14001
         }
       ],
-      "UpstreamPathTemplate": "/{version}/customer",
+      "UpstreamPathTemplate": "/{version}/customer/logged-in",
       "UpstreamHttpMethod": [ "GET" ],
       "DangerousAcceptAnyServerCertificateValidator": true,
       "AuthenticationOptions": {
